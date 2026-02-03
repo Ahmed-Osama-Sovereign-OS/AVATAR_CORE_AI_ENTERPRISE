@@ -1,0 +1,10 @@
+name: Build AVATAR CORE AI
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt update
+      - run: sudo apt install ffmpeg -y
+      - run: pip install -r requirements.txt
